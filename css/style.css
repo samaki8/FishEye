@@ -42,9 +42,45 @@ h1 {
 .photographer_section article h2 {
     color: #D3573C;
     font-size: 36px;
+    white-space: nowrap;
+    text-align: center;
+    margin-bottom: 0px;
 }
 
 .photographer_section article img {
-    height: 200px;
-    width: 200px;
+    height: 226px;
+    width: auto;
+    position: relative;
+    left: -13px;
+    top: -9px;
+}
+.photographer_section article h3 {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #901C1C;
+    margin: 0px;
+}
+.photographer_section p:first-of-type {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 13px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    margin: 0px;
+}
+
+.photographer_section p:nth-of-type(2) {
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #757575;
+    margin: 0px;
+
 }
