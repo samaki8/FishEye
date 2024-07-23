@@ -48,11 +48,16 @@ h1 {
 }
 
 .photographer_section article img {
-    height: 226px;
-    width: auto;
+   /* height: 226px;
+    width: auto;*/
     position: relative;
     left: -13px;
     top: -9px;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px ;
+    object-fit: cover;
+
 }
 .photographer_section article h3 {
     font-size: 13px;
