@@ -17,9 +17,13 @@ export function photographerTemplate(data) {
         h3.textContent = `${city}, ${country}`;
         pTagline.textContent = tagline;
         pPrice.textContent = `${price} €/jour`;
+        const link = document.createElement('a');
+        link.setAttribute('href', './photographer.html');
 
-        article.appendChild(img);
-        article.appendChild(h2);
+        link.appendChild(img);
+        link.appendChild(h2);
+
+        article.appendChild(link);
         article.appendChild(h3);
         article.appendChild(pTagline);
         article.appendChild(pPrice);
