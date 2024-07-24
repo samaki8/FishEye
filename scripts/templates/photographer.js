@@ -1,4 +1,3 @@
-
 export function photographerTemplate(data) {
     const { name, portrait, city, country, tagline, price, id } = data;
 
@@ -17,9 +16,10 @@ export function photographerTemplate(data) {
         h3.textContent = `${city}, ${country}`;
         pTagline.textContent = tagline;
         pPrice.textContent = `${price} €/jour`;
-        const link = document.createElement('a');
-        link.setAttribute('href', './photographer.html');
 
+        // Créer un lien avec l'ID du photographe dans l'URL
+        const link = document.createElement('a');
+        link.href = `photographer.html?id=${id}`;
         link.appendChild(img);
         link.appendChild(h2);
 

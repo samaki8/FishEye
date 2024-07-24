@@ -8,6 +8,16 @@
     margin: 0 100px;
 }
 
+.logo {
+    width: 200px;
+    height: 50px;
+    top: 43px;
+    left: 100px;
+    gap: 0px;
+    opacity: 0px;
+
+}
+
 .contact_button {
     font-size: 20px;
     font-weight: bold;
