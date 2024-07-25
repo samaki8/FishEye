@@ -1,3 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1240px;
+    font-family: 'DM Sans';
+}
+
 #contact_modal {
     display: none;
 }
@@ -6,6 +18,10 @@
     background-color: #FAFAFA;
     height: 300px;
     margin: 0 100px;
+    display: flex;
+    position: relative;
+
+    
 }
 
 .logo {
@@ -29,6 +45,11 @@
     background-color: #901C1C;
     border-radius: 5px;
     cursor: pointer;
+    align-self: center;
+    position: absolute;
+    left: 50%;
+    bottom: 300px;
+   /* transform: translateX(-50%);*/
 }
 
 .modal {
@@ -83,4 +104,59 @@ form input {
     height: 68px;
     border: none;
     border-radius: 5px;
+}
+.photograph-header img {
+    /* height: 226px;
+     width: auto;*/
+     position: absolute;
+     left: 0px;
+     top: -9px;
+     border-radius: 50%;
+     height: 200px;
+     width: 200px ;
+     object-fit: cover;
+ 
+}
+.photograph-header .photographer_card {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    align-self: center;
+    position: absolute;
+    right: 50px;
+}
+
+.photograph-header h2 {
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 83px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #D3573C;
+    position: absolute;
+    top: 71px;
+    left: 50px;
+}
+.photograph-header h3 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #901C1C;
+    position: absolute;
+    left: 50px;
+    top: 154px;
+}
+.photograph-header p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #525252;
+    position: absolute;
+    left: 50px;
+    top: 204px;
 }

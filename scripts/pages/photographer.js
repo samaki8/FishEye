@@ -42,7 +42,7 @@ function createImage(src, alt) {
 
 function createCardContainer(children) {
     const container = document.createElement('div');
-    container.className = 'card-container';
+    container.className = 'photographer_card';
     children.forEach(child => container.appendChild(child));
     return container;
 }
