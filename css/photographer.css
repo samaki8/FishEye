@@ -21,7 +21,7 @@ body {
     display: flex;
     position: relative;
 
-    
+
 }
 
 .logo {
@@ -34,23 +34,7 @@ body {
 
 }
 
-.contact_button {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    padding: 11px;
-    width: 170px;
-    height: 70px;
-    border: none;
-    background-color: #901C1C;
-    border-radius: 5px;
-    cursor: pointer;
-    align-self: center;
-    position: absolute;
-    left: 50%;
-    bottom: 300px;
-   /* transform: translateX(-50%);*/
-}
+
 
 .modal {
     border-radius: 5px;
@@ -105,18 +89,20 @@ form input {
     border: none;
     border-radius: 5px;
 }
+
 .photograph-header img {
     /* height: 226px;
      width: auto;*/
-     position: absolute;
-     left: 0px;
-     top: -9px;
-     border-radius: 50%;
-     height: 200px;
-     width: 200px ;
-     object-fit: cover;
- 
+    position: relative;
+    left: 0px;
+    top: -9px;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+
 }
+
 .photograph-header .photographer_card {
     height: 200px;
     width: 200px;
@@ -138,6 +124,7 @@ form input {
     top: 71px;
     left: 50px;
 }
+
 .photograph-header h3 {
     font-size: 24px;
     font-weight: 400;
@@ -149,6 +136,7 @@ form input {
     left: 50px;
     top: 154px;
 }
+
 .photograph-header p {
     font-size: 18px;
     font-weight: 400;
@@ -159,4 +147,41 @@ form input {
     position: absolute;
     left: 50px;
     top: 204px;
+}
+
+.contact_button {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 11px;
+    width: 170px;
+    height: 70px;
+    border: none;
+    background-color: #901C1C;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width: 800px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 auto;
+        height: 90px;
+        margin-top: 20px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
 }
