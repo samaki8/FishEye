@@ -67,6 +67,11 @@ body {
     top: 50%;
 
 }
+.modal-close-btn {
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
 
 .modal {
     border-radius: 5px;

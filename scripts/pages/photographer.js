@@ -1,3 +1,5 @@
+import PhotographerCard from '../templates/PhotographerCard.js'
+
 async function fetchPhotographers() {
     try {
         const response = await fetch('data/photographers.json');
@@ -12,18 +14,19 @@ async function fetchPhotographers() {
 }
 
 
+
 function createPhotographerProfile(data) {
     const { name, city, country, tagline, portrait, altname } = data;
     const picture = `assets/photographers/${portrait}`;
 
     const img = createImage(picture, altname);
     const photographHeader = document.querySelector('.photograph-header');
- 
-    
+
+
     if (photographHeader) {
         const imgcontainer = createCardContainer([img]);
         photographHeader.appendChild(imgcontainer);
-    
+
         const h2 = createHeading('h2', name);
         const h3 = createHeading('h3', `${city}, ${country}`);
         const tag = createParagraph(tagline);
@@ -31,6 +34,18 @@ function createPhotographerProfile(data) {
     } else {
         console.error('Element with class .photograph-header not found');
     }
+
+    const mediaContainer = document.querySelector('.media-container');
+    if (mediaContainer) {
+        data.media.forEach(mediaData => {
+            const media = mediaData.type === 'image' ? new ImageMedia(mediaData) : new VideoMedia(mediaData);
+            const mediaImg = createImage(media.url, media.title);
+            mediaContainer.appendChild(mediaImg);
+        });
+    } else {
+        console.error('Element with class .media-container not found');
+    }
+
 }
 
 function createImage(src, alt) {
@@ -58,11 +73,12 @@ function createParagraph(text) {
     p.textContent = text;
     return p;
 }
-
+// recuperation id
 function getPhotographerIdFromUrl() {
     const params = new URLSearchParams(window.location.search);
     return params.get('id');
 }
+
 
 document.addEventListener('DOMContentLoaded', async () => {
     const photographerId = getPhotographerIdFromUrl();
