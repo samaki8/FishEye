@@ -13,8 +13,8 @@ export default class PhotographerHeader {
         };
         const about = `
             <div class="photographer_profile__infos">
-                <h1 class="photographer_name">${this.photographer.name}</h1>
-                <p class="photographer_location">${this.photographer.city}, ${this.photographer.country}</p>
+                <h2 class="photographer_name">${this.photographer.name}</h2>
+                <h3 class="photographer_location">${this.photographer.city}, ${this.photographer.country}</h3>
                 <p class="photographer_tagline">${this.photographer.tagline}</p>    
             </div>
             <button class="contact_button" type="button" aria-label="Open contact form">Contactez-moi</button>
