@@ -5,69 +5,84 @@
     <link href="css/photographer.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
-    <script type="module" dever src="./scripts/pages/photographer.js"></script>
-    <script type="module" dever src="./scripts/utils/contactForm.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">    
   
     <title>Fisheye - photographe </title>
   </head>
   <body>
-    <header class="photographer_banner">
-      <a href="index.html" aria-label="Fisheye Home Page">
-        <img src="assets/images/logo.png" class="logo" alt="fisheye logo">
-      </a>
-    </header>
-    <main id="main">
-      <div class="photograph-header">
-        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
-      </div>
-    </main>
-    <div id="contact_modal">
-			<div class="modal">
-				<header>
-          <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
+    <div class="page">
+        <!-- Header -->
+        <header>
+            <a href="./index.html">
+                <img src="assets/images/logo.png" class="logo" alt="Fisheye Home page" aria-label="Return to home page"/>
+            </a>
         </header>
-				<form>
-          <button class="modal-close-btn"></button>
-					<div>
-						<label>Prénom</label>
-            <form action="#" method="post">
-             <!-- <label for="prenom">Prénom :</label>-->
-              <input type="text" id="prenom" name="user_name" required><br>
-      
-              <label for="nom">Nom :</label>
-              <input type="text" id="nom" name="user_name" required><br>
-      
-              <label for="email">Email :</label>
-              <input type="email" id="email" name="user_email" required><br>
-      
-              <label for="message">Message :</label>
-              <textarea id="message" name="user_message" rows="10" cols="66" required></textarea><br>
-      
-             <!-- <input type="submit" value="Envoyer"> -->
-					</div>
-          <button class="send-button">Envoyer</button>
-				</form>
-			</div>
-		</div>
-    <div class="media-container">
+        <!-- Main -->
+        <main>
+            <section class="main_about"></section>
+            <section class="main_content">
+                <div class="main_content_filter">
+                    <h2>Trier par</h2>
+                    <div class="filter_section" >
+                        <div class="dropdown">
+                            <button class="btn_drop" type="button" role="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="filter options" aria-label="Sort by">
+                                <span id="current_filter">Titre</span>
+                                <span class="fa-solid fa-chevron-up" aria-hidden="true"></span>
+                            </button>
 
+                            <ul class="dropdown_content" aria-hidden="true">
+                                <li role="option">
+                                    <button type="button" tabindex="-1" aria-label="Sort by title">Titre</button>
+                                </li>
+                                <li role="option">
+                                    <button type="button" tabindex="-1" aria-label="Sort by popularity">Popularité</button>
+                                </li>
+                                <li role="option">
+                                    <button type="button" tabindex="-1" aria-label="Sort by date">Date</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_content_medias"></div>
+            </section>
+        </main>
+        <!-- Modal Form -->
+        <div class="modal_wrapper wrapper" aria-modal="true" role="dialog">
+            <div class="modal_form" aria-describedby="formTitle">
+                <div class="modal_form_title">
+                    <h2 id="formTitle">Contactez-moi <button  class="btn_close" type="button" aria-label="Close contact form"></button></h2>
+                    <p class="modal_form_name"></p>
+                </div> 
+                <form novalidate>
+                    <div class="form_content">
+                        <label id="firstname-label" for="firstname">Prénom <span aria-hidden="true">*</span></label>
+                        <input class="formField" aria-labelledby="firstname-label" type="text" id="firstname" name="firstname" maxlength="15" data-error="Minimum 3 caractères, maximum 15 caractères. Les chiffres et caractères spéciaux différents de - ne sont pas autorisés." required/>
+                        <span></span>
+                    </div>
+                    <div class="form_content">
+                        <label id="lastname-label" for="lastname">Nom <span aria-hidden="true">*</span></label>
+                        <input class="formField" aria-labelledby="lastname-label" type="text" id="lastname" name="lastname" maxlength="15" data-error="Minimum 3 caractères, maximum 15 caractères. Les chiffres et caractères spéciaux différents de - ne sont pas autorisés." required/>
+                        <span></span>
+                    </div>
+                    <div class="form_content">
+                        <label id="email-label" for="email">Email <span aria-hidden="true">*</span></label>
+                        <input class="formField" aria-labelledby="email-label" type="email" id="email" name="email" maxlength="100" data-error="Veuillez renseigner une adresse mail valide." required/>
+                        <span></span>
+                    </div>
+                    <div class="form_content">
+                        <label id="message-label" for="message">Votre message <span aria-hidden="true">*</span></label>
+                        <textarea class="formField" aria-labelledby="message-label" id="message" name="message" maxlength="200" data-error="Votre message doit contenir entre 20 et 200 caractères." required></textarea>
+                        <span></span>
+                    </div>
+                    <button class="btn btn_submit" type="submit" aria-label="Send">Envoyer</button>
+                </form>
+            </div>
+        </div>
+       
     </div>
-    <div class="filter-form-wrapper"></div>
-    <div class="media-wrapper"></div>
-     <!-- *********  Sort Media *********** -->
-     <aside class="sorter_media" >
-    </aside>
-    <!-- *********  Media list *********** -->
-    <section class="photograph_media" >
-    </section>
-    <!-- *********  Likes count *********** -->
-    <aside class="photograph_likes" >
-    </aside>
 
-
-
-    
-  </body>
+    <!-- Script -->
+    <script src="./scripts/pages/photographerPage.js" type="module"></script>
+</body>
 </html>

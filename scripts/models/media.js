@@ -1,5 +1,4 @@
-// eslint-disable-next-line max-classes-per-file
-class Media {
+export class Media {
     constructor(data) {
         const {
             id, photographerId, title, likes, date, price,
@@ -51,7 +50,7 @@ class Media {
     getSource(photographerName, media) {
         if (photographerName) {
             const folder = this.photographerFolder(photographerName)
-            return `assets/media/${folder}/${media}`
+            return `/assets/images/${folder}/${media}`
         }
         return false
     }

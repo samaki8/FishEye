@@ -1,57 +1,14 @@
-
-import mediaFactory from '../factories/media.js'
-import photographerFactory from '../factories/photographer.js'
-
-class Api {
-    constructor(type) {
-        this.url = 'data/photographers.json'
-        this.type = type
-        this.cache = []
+export default class Api {
+    constructor(url){
+        this.url = url;
     }
-
-    async get() {
-        // Fetch and return the JSON File
-        const cachedResult = this.cache.find((elt) => elt.key === this.type)
-        if (cachedResult) {
-            return cachedResult
+    async get(){
+        try{
+            const response = await fetch(this.url);
+            const data = await response.json();
+            return data;
+        } catch(err){
+            throw new Error(err);
         }
-
-        const response = await fetch(this.url)
-
-        if (response.status == 200) {
-            let json = await response.json()
-            json = this.type == 'photographers' ? json.photographers : json.media
-            const data = {
-                key: this.type,
-                data: [...json],
-            }
-            this.cache.push(data)
-            return data
-        }
-        throw new Error(response.status)
     }
-}
-
-export class PhotographerApi extends Api {
-    // Get only one photographer
-    async getOnePhotographer(id) {
-        const result = await this.get()
-        result.type = 'photographer'
-        const photographer = await photographerFactory(result, id)
-
-        return photographer
-    }
-
-   
-}
-
-export class MediaApi extends Api {
-    // Get all medias
-    async getMediaOfPhotographer(id) {
-        let getMedia = await this.get()
-        getMedia = await getMedia.data.filter((media) => media.photographerId == id)
-        const medias = await getMedia.map((media) => (mediaFactory(media)))
-
-        return medias
-    }
-}
+};
