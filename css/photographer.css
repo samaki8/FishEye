@@ -346,3 +346,29 @@ form input {
 .btn_submit:focus {
     outline: 2px solid var(--color-light);
 }
+
+.btn_like {
+    align-items: center;
+    background-color: rgba(255, 255, 255, .7);
+    border-radius: 8px;
+    bottom: 5px;
+    cursor: pointer;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    padding: 4px;
+    position: absolute;
+    right: 55px;
+    width: 30px;
+}
+.wish-btn path {
+    fill: transparent;
+    stroke-width: 6px;
+    stroke: #000;
+    transition: .4s;
+}
+
+.wish-btn.wished path  {
+    fill: tomato;
+    stroke: #fff;
+}

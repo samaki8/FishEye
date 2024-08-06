@@ -3,6 +3,11 @@ export default class PhotographerMedias {
     constructor(photographer, medias) {
         this.photographer = photographer;
         this.medias = medias;
+         // WishLib Pub/sub
+         //this.WishlistSubject = new WishlistSubject()
+         //this.WhishListCounter = new WhishListCounter()
+ 
+         //this.WishlistSubject.subscribe(this.WhishListCounter)
     };
 
     createPhotographerMedias() {
