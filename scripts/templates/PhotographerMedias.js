@@ -8,6 +8,7 @@ export default class PhotographerMedias {
          //this.WhishListCounter = new WhishListCounter()
  
          //this.WishlistSubject.subscribe(this.WhishListCounter)
+         
     };
 
     createPhotographerMedias() {
@@ -16,8 +17,8 @@ export default class PhotographerMedias {
             <section class="gallery">
                 ${this.medias.map(media => {
             const mediaContent = media.image
-                ? ` <img class="gallery_thumbnail" src="./assets/images/${this.photographer.name}/${media.image}" alt="${media.alt}">`
-                : ` <video class="gallery_thumbnail" aria-label="${media.alt}">
+                ? ` <img class="gallery_thumbnail" src="./assets/images/${this.photographer.name}/${media.image}" alt="${media.title}">`
+                : ` <video class="gallery_thumbnail" aria-label="${media.title}">
                         <source src="./assets/images/${this.photographer.name}/${media.video}" type="video/mp4">
                     </video>`;
             return `

@@ -35,7 +35,8 @@ export class Media {
     get price() {
         return this._price
     }
-
+}    
+/*
     photographerFolder(name) {
         if (name) {
             let folder = name.split(' ')[0]
@@ -54,30 +55,39 @@ export class Media {
         }
         return false
     }
+}*/
+/*
+get medias() {
+    return `assets/images/Photographers/${this.photographer.name}/${this.medias}`
 }
-
+*/
 // Image Media
+
+
 export class ImageM extends Media {
     constructor(data) {
         super(data)
         this._image = data.image
     }
+}
 
+/*
     // get image link
     getImage(photographerName) {
         return this.getSource(photographerName, this._image)
     }
 }
-
+*/
 // Video Media
 export class VideoM extends Media {
     constructor(data) {
         super(data)
         this._video = data.video
     }
-
+}
+/*
     // get video link
     getVideo(photographerName) {
         return this.getSource(photographerName, this._video)
     }
-}
+}*/
