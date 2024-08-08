@@ -1,5 +1,7 @@
-import * as Media from '../models/media.js'
-
+/*import Image from '../models/Image.js'
+import Video from '../models/Video.js'
+/*
+/*
 export default class MediasFactory {
     constructor(media) {
         if (media) {
@@ -10,5 +12,18 @@ export default class MediasFactory {
         }
         // En cas d'erreur
         throw new Error('Pas de média');
+    }
+}
+*/
+import {Image,Video} from '../models/media.js'
+export default class MediasFactory {
+    constructor(data) {
+        if (data.image) {
+            return new Image(data)
+        } else if (data.video) {
+            return new Video(data)
+        } else {
+            throw 'Unknown data type'
+        }
     }
 }

@@ -1,17 +1,30 @@
 export class Media {
     constructor(data) {
-        const {
-            id, photographerId, title, likes, date, price,
-        } = data
+        
 
-        this._id = id
-        this._photographerId = photographerId
-        this._title = title
-        this._likes = likes
-        this._date = date
-        this._price = price
+        this.id = data.id;
+        this.photographerId = data.photographerId
+        this.title = data.title
+        this.likes = data.likes
+        this.date = data.date
+        this.price = data.price
     }
+}
 
+export  class Video extends Media {
+    constructor(data) {
+        super(data);
+        this.video = data.video;
+    }
+};
+export class Image extends Media {
+    constructor(data) {
+        super(data);
+        this.image = data.image;
+    }
+};
+
+/*
     get id() {
         return this._id
     }
@@ -63,7 +76,7 @@ get medias() {
 */
 // Image Media
 
-
+/*
 export class ImageM extends Media {
     constructor(data) {
         super(data)
@@ -79,6 +92,7 @@ export class ImageM extends Media {
 }
 */
 // Video Media
+/*
 export class VideoM extends Media {
     constructor(data) {
         super(data)
