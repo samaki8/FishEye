@@ -11,7 +11,7 @@
 }
 
 .main_about {
-   /* background-color: #FAFAFA;
+    /* background-color: #FAFAFA;
     height: 300px;
     margin: 0 100px;
     display: flex;
@@ -26,10 +26,11 @@
 
 
 }
-.page{
-margin: 0 100px;
-/*padding: 30px 20px 20px;*/
-max-width: 1400px;
+
+.page {
+    margin: 0 100px;
+    /*padding: 30px 20px 20px;*/
+    max-width: 1400px;
 }
 
 .logo {
@@ -59,6 +60,7 @@ max-width: 1400px;
     top: 63%;
     transform: translateX(-50%);
 }
+
 .send-button {
     font-size: 20px;
     font-weight: bold;
@@ -75,19 +77,22 @@ max-width: 1400px;
     top: 50%;
 
 }
+
 .modal-close-btn {
     position: absolute;
     right: 0;
     top: 15px;
 }
+
 header {
-   
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 ;
+    padding: 0;
     height: 50px;
 }
+
 .modal {
     border-radius: 5px;
     background-color: #DB8876;
@@ -152,7 +157,7 @@ form input {
     height: 200px;
     width: 200px;
     object-fit: cover;
-    
+
 
 }
 
@@ -162,7 +167,7 @@ form input {
     border-radius: 50%;
     overflow: hidden;
     align-self: center;
-  /*  position: absolute;*/
+    /*  position: absolute;*/
     right: 50px;
 }
 
@@ -173,7 +178,7 @@ form input {
     letter-spacing: 0em;
     text-align: left;
     color: #D3573C;
-   /* position: absolute;*/
+    /* position: absolute;*/
     top: 71px;
     left: 50px;
 }
@@ -185,7 +190,7 @@ form input {
     letter-spacing: 0em;
     text-align: left;
     color: #901C1C;
-   /* position: absolute;*/
+    /* position: absolute;*/
     left: 50px;
     top: 154px;
 }
@@ -197,7 +202,7 @@ form input {
     letter-spacing: 0em;
     text-align: left;
     color: #525252;
-  /*  position: absolute;*/
+    /*  position: absolute;*/
     left: 50px;
     top: 204px;
 }
@@ -222,6 +227,7 @@ form input {
 
 
 }
+
 /* MAIN */
 /*main{
     padding: 0 120px;
@@ -235,13 +241,13 @@ form input {
     color: black;
 }
 
-.photographer_profile__infos{
+.photographer_profile__infos {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.photographer_thumbnail{
+.photographer_thumbnail {
     width: 200px;
     height: 200px;
 }
@@ -266,7 +272,7 @@ form input {
     animation: fadeIn .3s ease-in-out forwards;
 }
 
-.modal_form_title{
+.modal_form_title {
     width: 100%;
     font-size: clamp(2rem, 3vw, 4rem);
 }
@@ -279,14 +285,15 @@ form input {
     font-size: clamp(2rem, 3vw, 4rem);
 }
 
-.btn_close:hover::before{
+.btn_close:hover::before {
     color: var(--color-primary);
 }
-.btn_close:focus:not(:hover)::before{
+
+.btn_close:focus:not(:hover)::before {
     outline: 2px solid var(--color-primary);
 }
 
-.btn_close::before{
+.btn_close::before {
     content: "\f00d";
     font-family: "Font Awesome 5 Free";
     padding: 5px;
@@ -328,7 +335,7 @@ form input {
     padding: 10px;
 }
 
-.form_content span{
+.form_content span {
     color: var(--color-dark);
     font-size: clamp(1.2rem, 1.6vw, 1.6rem);
 }
@@ -336,9 +343,9 @@ form input {
 .form_content input:invalid:focus,
 .form_content textarea:invalid:focus {
     outline: 2px solid var(--color-primary);
-} 
+}
 
-.btn_submit{
+.btn_submit {
     max-width: 150px;
 }
 
@@ -347,20 +354,7 @@ form input {
     outline: 2px solid var(--color-light);
 }
 
-.btn_like {
-    align-items: center;
-    background-color: rgba(255, 255, 255, .7);
-    border-radius: 8px;
-    bottom: 5px;
-    cursor: pointer;
-    display: flex;
-    height: 30px;
-    justify-content: center;
-    padding: 4px;
-    position: absolute;
-    right: 55px;
-    width: 30px;
-}
+
 .btn_like path {
     fill: transparent;
     stroke-width: 6px;
@@ -368,19 +362,19 @@ form input {
     transition: .4s;
 }
 
-.btn_like.liked path  {
+.btn_like.liked path {
     fill: tomato;
     stroke: #fff;
 }
 
-.gallery_card {
-    
-}
+.gallery_card {}
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 60PX;
 }
+
 .gallery_thumbnail {
     width: 100%;
     height: 300px;
@@ -390,10 +384,9 @@ form input {
     border-radius: 5px;
 
 }
+
 figcaption {
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 31px;
+
     letter-spacing: 0em;
     text-align: left;
     color: #901C1C;
@@ -401,4 +394,70 @@ figcaption {
     align-items: center;
     height: 50px;
     justify-content: space-between;
+}
+
+figcaption h2 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 31px;
+    Font: DM Sans;
+
+}
+
+.nbLike {
+    font-family: DM Sans;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31.25px;
+    text-align: right;
+
+}
+
+/* Style général pour les boutons de like */
+/* Style lorsque le bouton est survolé */
+.btn_like:hover {
+    color: #e74c3c;
+}
+
+/* Style lorsque le bouton est cliqué */
+.btn_like:active {
+    transform: scale(1.2);
+}
+
+/* Style pour l'icône de cœur */
+.btn_like .fa-heart {
+    margin-left: 5px;
+}
+
+.btn_like {
+    border-radius: 5px;
+    padding: 0 1px;
+    font-size: clamp(1.8rem, 2vw, 2.2rem);
+    color: #901C1C;
+    ;
+}
+
+.btn_like:focus-visible:not(:hover) {
+    outline: 2px solid #DB8876;
+}
+
+.liked {
+    color: BLACK;
+}
+/*TOTAL LIKE*/
+aside{
+    position: sticky;
+    bottom: 0;
+    left: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 50px;
+    width: fit-content;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: clamp(1.6rem, 2vw, 2rem);
+    background-color:   #DB8876;
 }
