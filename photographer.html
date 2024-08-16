@@ -1,81 +1,99 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/photographer.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
     <!-- CDN Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
     <title>Fisheye - photographe </title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="page">
         <!-- Header -->
         <header>
             <a href="./index.html">
-                <img src="assets/images/logo.png" class="logo" alt="Fisheye Home page" aria-label="Return to home page"/>
+                <img src="assets/images/logo.png" class="logo" alt="Fisheye Home page"
+                    aria-label="Return to home page" />
             </a>
         </header>
         <!-- Main -->
         <main>
             <section class="main_about"></section>
-          
+
             <section class="main_content">
                 <div class="sort-options">
-                    Trier par
-                    <button id="sort-button" aria-haspopup="listbox" aria-expanded="false" aria-controls="sort-menu">
-                        Popularité
-                    </button>
-                    <div id="sort-menu" class="sort-menu" aria-hidden="true">
-                        <button onclick="sortMedia('popularity')" aria-label="Trier par popularité">Popularité</button>
-                        <button onclick="sortMedia('date')" aria-label="Trier par date">Date</button>
-                        <button onclick="sortMedia('title')" aria-label="Trier par titre">Titre</button>
-                    </div>
+                    <h2>Trier par</h2>
+                    <div class="filter_section"></div>
+                            <button id="sort-button" aria-haspopup="listbox" aria-expanded="true" aria-controls="filter options"
+                                aria-label="Sort by">
+                                <span id="current_sort"> Popularité</span>
+                                <span class="fa-solid fa-chevron-up rotate" aria-hidden="true"></span>
+                            </button>
+                            <ul id="sort-menu" class="sort-menu" aria-hidden="true">
+                                <li role="option" data-sort-type="popularité">Popularité</li>
+                                <li role="option" data-sort-type="date">Date</li>
+                                <li role="option" data-sort-type="title">Titre</li>
+                            </ul>
                 </div>
-                <div class="main_content_medias"></div>
-            </section>
-            
-        </main>
-        <!-- Modal Form -->
-        <div class="modal_wrapper wrapper" aria-modal="true" role="dialog">
-            <div class="modal_form" aria-describedby="formTitle">
-                <div class="modal_form_title">
-                    <h2 id="formTitle">Contactez-moi <button  class="btn_close" type="button" aria-label="Close contact form"></button></h2>
-                    <p class="modal_form_name"></p>
-                </div> 
-                <form novalidate>
-                    <div class="form_content">
-                        <label id="firstname-label" for="firstname">Prénom <span aria-hidden="true">*</span></label>
-                        <input class="formField" aria-labelledby="firstname-label" type="text" id="firstname" name="firstname" maxlength="15" data-error="Minimum 3 caractères, maximum 15 caractères. Les chiffres et caractères spéciaux différents de - ne sont pas autorisés." required/>
-                        <span></span>
-                    </div>
-                    <div class="form_content">
-                        <label id="lastname-label" for="lastname">Nom <span aria-hidden="true">*</span></label>
-                        <input class="formField" aria-labelledby="lastname-label" type="text" id="lastname" name="lastname" maxlength="15" data-error="Minimum 3 caractères, maximum 15 caractères. Les chiffres et caractères spéciaux différents de - ne sont pas autorisés." required/>
-                        <span></span>
-                    </div>
-                    <div class="form_content">
-                        <label id="email-label" for="email">Email <span aria-hidden="true">*</span></label>
-                        <input class="formField" aria-labelledby="email-label" type="email" id="email" name="email" maxlength="100" data-error="Veuillez renseigner une adresse mail valide." required/>
-                        <span></span>
-                    </div>
-                    <div class="form_content">
-                        <label id="message-label" for="message">Votre message <span aria-hidden="true">*</span></label>
-                        <textarea class="formField" aria-labelledby="message-label" id="message" name="message" maxlength="200" data-error="Votre message doit contenir entre 20 et 200 caractères." required></textarea>
-                        <span></span>
-                    </div>
-                    <button class="btn btn_submit" type="submit" aria-label="Send">Envoyer</button>
-                </form>
+    </div>
+    <div class="main_content_medias"></div>
+    </section>
+
+    </main>
+    <!-- Modal Form -->
+    <div class="modal_wrapper wrapper" aria-modal="true" role="dialog">
+        <div class="modal_form" aria-describedby="formTitle">
+            <div class="modal_form_title">
+                <h2 id="formTitle">Contactez-moi <button class="btn_close" type="button"
+                        aria-label="Close contact form"></button></h2>
+                <p class="modal_form_name"></p>
             </div>
+            <form novalidate>
+                <div class="form_content">
+                    <label id="firstname-label" for="firstname">Prénom <span aria-hidden="true">*</span></label>
+                    <input class="formField" aria-labelledby="firstname-label" type="text" id="firstname"
+                        name="firstname" maxlength="15"
+                        data-error="Minimum 3 caractères, maximum 15 caractères. Les chiffres et caractères spéciaux différents de - ne sont pas autorisés."
+                        required />
+                    <span></span>
+                </div>
+                <div class="form_content">
+                    <label id="lastname-label" for="lastname">Nom <span aria-hidden="true">*</span></label>
+                    <input class="formField" aria-labelledby="lastname-label" type="text" id="lastname" name="lastname"
+                        maxlength="15"
+                        data-error="Minimum 3 caractères, maximum 15 caractères. Les chiffres et caractères spéciaux différents de - ne sont pas autorisés."
+                        required />
+                    <span></span>
+                </div>
+                <div class="form_content">
+                    <label id="email-label" for="email">Email <span aria-hidden="true">*</span></label>
+                    <input class="formField" aria-labelledby="email-label" type="email" id="email" name="email"
+                        maxlength="100" data-error="Veuillez renseigner une adresse mail valide." required />
+                    <span></span>
+                </div>
+                <div class="form_content">
+                    <label id="message-label" for="message">Votre message <span aria-hidden="true">*</span></label>
+                    <textarea class="formField" aria-labelledby="message-label" id="message" name="message"
+                        maxlength="200" data-error="Votre message doit contenir entre 20 et 200 caractères."
+                        required></textarea>
+                    <span></span>
+                </div>
+                <button class="btn btn_submit" type="submit" aria-label="Send">Envoyer</button>
+            </form>
         </div>
-       
+    </div>
+
     </div>
 
     <!-- Script -->
-     <script src="./scripts/models/sortMedia.js" type="module" ></script>
+    <script src="./scripts/models/sortMedia.js" type="module"></script>
     <script src="./scripts/pages/photographerPage.js" type="module"></script>
 </body>
+
 </html>

@@ -1,23 +1,54 @@
-<div class="main_content_filter">
-<h2>Trier par</h2>
-<div class="filter_section" >
-    <div class="dropdown">
-        <button class="btn_drop" type="button" role="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="filter options" aria-label="Sort by">
-            <span id="current_filter">Titre</span>
-            <span class="fa-solid fa-chevron-up" aria-hidden="true"></span>
-        </button>
+import { sortByPopularity, sortByDate, sortByTitle } from '../models/sortMedia.js';
 
-        <ul class="dropdown_content" aria-hidden="true">
-            <li role="option">
-                <button type="button" aria-label="Sort by title">Titre</button>
-            </li>
-            <li role="option">
-                <button type="button" aria-label="Sort by popularity">Popularité</button>
-            </li>
-            <li role="option">
-                <button type="button" aria-label="Sort by date">Date</button>
-            </li>
-        </ul>
-    </div>
-</div>
-</div>       
+export default class PhotographerMedias {
+  constructor(photographer, medias) {
+    this.photographer = photographer;
+    this.medias = medias;   
+
+    this.sortButton = document.getElementById('sort-button');
+    this.sortMenu = document.getElementById('sort-menu');
+  }
+
+  createPhotographerMedias() {
+    // ... (your code to create media cards)
+
+    this.addEventListeners();
+  }
+
+  addEventListeners() {
+    this.sortButton.addEventListener('click', () => {
+      this.sortMenu.classList.toggle('active'); // Toggle active class
+    });
+
+    this.sortMenu.addEventListener('click', (event) => {
+      const sortItem = event.target.closest('li'); // Target clicked list item
+      if (sortItem) {
+        const sortType = sortItem.dataset.sortType;
+        this.sortMedias(sortType);
+        this.updateSortButtonLabel(sortType); // Update button label
+        this.sortMenu.classList.remove('active'); // Close menu
+      }
+    });
+  }
+
+  sortMedias(sortType) {
+    switch (sortType) {
+      case 'popularity':
+        this.medias = sortByPopularity(this.medias);
+        break;
+      case 'date':
+        this.medias = sortByDate(this.medias);
+        break;
+      case 'title':
+        this.medias = sortByTitle(this.medias);
+        break;
+    }
+
+    // ... (your code to re-render media cards based on sorted data)
+  }
+
+  updateSortButtonLabel(sortType) {
+    const sortLabel = this.sortButton.textContent.trim(); // Get current label
+    this.sortButton.textContent = sortType.charAt(0).toUpperCase() + sortLabel.slice(1);
+  }
+}

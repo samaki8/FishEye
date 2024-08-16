@@ -9,3 +9,5 @@ export function createVideo(media, photographerName) {
             <source src="./assets/images/${photographerName}/${media.video}" type="video/mp4">
         </video>`;
 }
+
+  
