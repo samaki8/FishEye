@@ -285,23 +285,7 @@ form input {
     font-size: clamp(2rem, 3vw, 4rem);
 }
 
-.btn_close:hover::before {
-    color: var(--color-primary);
-}
 
-.btn_close:focus:not(:hover)::before {
-    outline: 2px solid var(--color-primary);
-}
-
-.btn_close::before {
-    content: "\f00d";
-    font-family: "Font Awesome 5 Free";
-    padding: 5px;
-    border-radius: 5px;
-    font-weight: 900;
-    color: var(--color-light);
-    font-size: clamp(2rem, 3vw, 3rem);
-}
 
 .modal_form form {
     display: flex;
@@ -349,23 +333,7 @@ form input {
     max-width: 150px;
 }
 
-.btn_submit:hover,
-.btn_submit:focus {
-    outline: 2px solid var(--color-light);
-}
 
-
-.btn_like path {
-    fill: transparent;
-    stroke-width: 6px;
-    stroke: #000;
-    transition: .4s;
-}
-
-.btn_like.liked path {
-    fill: tomato;
-    stroke: #fff;
-}
 
 .gallery_card {}
 
@@ -430,11 +398,12 @@ figcaption h2 {
 }
 
 .btn_like {
-    border-radius: 5px;
+    
+    border: none;
     padding: 0 1px;
     font-size: clamp(1.8rem, 2vw, 2.2rem);
     color: #901C1C;
-    ;
+    background-color: transparent
 }
 
 .btn_like:focus-visible:not(:hover) {
@@ -460,4 +429,25 @@ aside{
     font-weight: bold;
     font-size: clamp(1.6rem, 2vw, 2rem);
     background-color:   #DB8876;
+}
+
+.sort-options {
+    position: relative;
+    display: inline-block;
+}
+
+#sort-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    flex-direction: column;
+}
+
+#sort-menu button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none
+
 }

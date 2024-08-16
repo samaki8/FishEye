@@ -4,6 +4,7 @@ import PhotographerMedias from "../templates/PhotographerMedias.js";
 import Photographer from "../models/Photographer.js";
 import MediasFactory from "../Factories/MediasFactory.js";
 
+
 const photographersApi = new Api("./data/photographers.json");
 const photographerId = new URLSearchParams(window.location.search).get("id");
 
@@ -26,6 +27,7 @@ const displayProfilePage = async () => {
     window.photographerMedias = mediasTemplate; // Rendre l'instance globale
     mediasTemplate.createPhotographerMedias();
 };
+
 
 displayProfilePage();
 

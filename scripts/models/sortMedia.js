@@ -10,3 +10,4 @@ export function sortByDate(medias) {
 export function sortByTitle(medias) {
     return medias.sort((a, b) => a.title.localeCompare(b.title));
 }
+

@@ -22,14 +22,22 @@
         <!-- Main -->
         <main>
             <section class="main_about"></section>
+          
             <section class="main_content">
                 <div class="sort-options">
-                    <button onclick="photographerMedias.createPhotographerMedias('popularity')">Popularité</button>
-                    <button onclick="photographerMedias.createPhotographerMedias('date')">Date</button>
-                    <button onclick="photographerMedias.createPhotographerMedias('title')">Titre</button>
+                    Trier par
+                    <button id="sort-button" aria-haspopup="listbox" aria-expanded="false" aria-controls="sort-menu">
+                        Popularité
+                    </button>
+                    <div id="sort-menu" class="sort-menu" aria-hidden="true">
+                        <button onclick="sortMedia('popularity')" aria-label="Trier par popularité">Popularité</button>
+                        <button onclick="sortMedia('date')" aria-label="Trier par date">Date</button>
+                        <button onclick="sortMedia('title')" aria-label="Trier par titre">Titre</button>
+                    </div>
                 </div>
                 <div class="main_content_medias"></div>
             </section>
+            
         </main>
         <!-- Modal Form -->
         <div class="modal_wrapper wrapper" aria-modal="true" role="dialog">
@@ -67,6 +75,7 @@
     </div>
 
     <!-- Script -->
+     <script src="./scripts/models/sortMedia.js" type="module" ></script>
     <script src="./scripts/pages/photographerPage.js" type="module"></script>
 </body>
 </html>
