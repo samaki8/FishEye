@@ -25,16 +25,19 @@ export const displayMediaWithFilter = mediasTemplate => {
     const allFilters = Array.from(document.querySelectorAll('.dropdown_content li button'))
 
     let filterAlreadySelected = allFilters.find(filter => filter.textContent == currentFilter.textContent);
-    filterAlreadySelected.style.display = 'none';
+    if (filterAlreadySelected) {
+        filterAlreadySelected.style.display = 'none';
+    }
 
     allFilters.forEach(filter => {
         filter.addEventListener('click', () => {
 
             currentFilter.textContent = filter.textContent;
             if (filterAlreadySelected) filterAlreadySelected.style.display = 'block';
+            
 
             filterAlreadySelected = filter;
-            filterAlreadySelected.style.display = 'none';
+          filterAlreadySelected.style.display = 'none';
 
             sortByFilter(filter.textContent);
         })

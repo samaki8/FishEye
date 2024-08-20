@@ -27,7 +27,7 @@ export const displayLightbox = medias => {
         
         lightboxMedia.innerHTML = `
             ${currentMedia.image ? `
-            <img src="./assets/images/photographers/${photographer.name}/${currentMedia.image}" alt="${currentMedia.alt}">` : 
+            <img src="./assets/images/${photographer.name}/${currentMedia.image}" alt="${currentMedia.alt}">` : 
             `<video controls aria-label="${currentMedia.alt}"><source src="./assets/images/${photographer.name}/${currentMedia.video}" type="video/mp4"></video>`}
 
             <figcaption>${currentMedia.title}</figcaption>
