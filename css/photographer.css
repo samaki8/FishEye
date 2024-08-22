@@ -9,20 +9,17 @@ a{
     cursor: pointer;
     outline: none;
     border: none;
+    text-decoration: none;
 }
 
-button{
+button {
     background-color: transparent;
 }
 
 
-a{
-   text-decoration: none;
-    outline: none;
-}
 
 img,
-video{
+video {
     object-fit: cover;
     object-position: center;
 }
@@ -100,15 +97,7 @@ li{
     top: 63%;
     transform: translateX(-50%);
 }
-.btn {
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
-    padding: 15px;
-    height: 50px;
-    background-color: #901C1C;
-    border-radius: 5px;
-}
+
 
 .btn_cta:hover,
 .btn_cta:focus {
@@ -260,33 +249,6 @@ form input {
     left: 50px;
     top: 204px;
 }
-
-/*
-
-@media screen and (max-width: 800px) {
-    header {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 0 auto;
-        height: 90px;
-        margin-top: 20px;
-    }
-
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-
-}
-*/
-/* MAIN */
-/*main{
-    padding: 0 120px;
-}
-*/
 
 
 
@@ -508,23 +470,7 @@ aside{
 
 
 /* MAIN */
-/*
-main{
-    padding: 0 120px;
-}*
-/*
 
-
-.main_about{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 40px;
-    margin-top: 20px;
-    background-color: #FAFAFA;
-}
-*/
 
 
 .photographer_profile__infos{
@@ -654,8 +600,6 @@ text-align: left;
     padding: 15px;
     font-size: 18px;
     color: #fff;
-    
-    Font:DM Sans;
      line-height:700;
 
 }
@@ -680,13 +624,21 @@ opacity: 0px;
     text-align: left;
 }
 
-.dropdown_content li button:hover, .dropdown_content li button:focus, .btn_drop:hover, .btn_drop:focus {
+.dropdown_content li button:hover,  .btn_drop:hover {
     background-color:#DB8876;
     color: black;
 }
 
 .curtain_effect {
     max-height: 100px;
+}
+.dropdown_content li button:focus, .btn_drop:focus {
+    background-color:#DB8876;
+    color: black;
+
+}
+.dropdown_content li {
+    color: black;
 }
 
 /* MEDIA GALLERY */

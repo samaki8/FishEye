@@ -1,10 +1,11 @@
 import { displayTotalLikes } from "../models/likes.js";
 import { displayLightbox } from "../utils/lightbox.js";
 
+
 export const openCloseFilterMenu = () => {
     const filterMenu = document.querySelector(".dropdown_content");
     const filterMenuButton = document.querySelector(".btn_drop");
-    const filterButtons = document.querySelectorAll(".dropdown_content button");
+  const filterButtons = document.querySelectorAll(".dropdown_content button");
 
     filterMenuButton.addEventListener("click", () => {
         const isExpanded = filterMenuButton.getAttribute("aria-expanded") === "true" || false;
@@ -25,19 +26,16 @@ export const displayMediaWithFilter = mediasTemplate => {
     const allFilters = Array.from(document.querySelectorAll('.dropdown_content li button'))
 
     let filterAlreadySelected = allFilters.find(filter => filter.textContent == currentFilter.textContent);
-    if (filterAlreadySelected) {
-        filterAlreadySelected.style.display = 'none';
-    }
+    filterAlreadySelected.style.display = 'none';
 
     allFilters.forEach(filter => {
         filter.addEventListener('click', () => {
 
             currentFilter.textContent = filter.textContent;
-            if (filterAlreadySelected) filterAlreadySelected.style.display = 'block';
-            
-
+           if (filterAlreadySelected) filterAlreadySelected.style.display = 'block';
+         
             filterAlreadySelected = filter;
-          filterAlreadySelected.style.display = 'none';
+            filterAlreadySelected.style.display = 'none';
 
             sortByFilter(filter.textContent);
         })
