@@ -10,9 +10,9 @@ export default class PhotographerMedias {
           <section class="gallery">
               ${this.medias.map(media => {
           const mediaContent = media.image
-              ? ` <img class="gallery_thumbnail" src="./assets/images/${this.photographer.name}/${media.image}" alt="${media.alt}">`
+              ? ` <img class="gallery_thumbnail" src="assets/images/${this.photographer.name}/${media.image}" alt="${media.alt}">`
               : ` <video class="gallery_thumbnail" aria-label="${media.alt}">
-                      <source src="./assets/images/${this.photographer.name}/${media.video}" type="video/mp4">
+                      <source src="assets/images/${this.photographer.name}/${media.video}" type="video/mp4">
                   </video>`;
           return `
                   <article class="gallery_card">                           

@@ -1,7 +1,7 @@
-import Api from "../api/Api.js";
+import Api from "../api/api.js";
 import PhotographerHeader from "../templates/PhotographerHeader.js";
 import PhotographerMedias from "../templates/PhotographerMedias.js";
-import Photographer from "../models/Photographer.js";
+import Photographer from "../models/photographer.js";
 import MediasFactory from "../factories/MediasFactory.js";
 import { displayTotalLikes } from "../models/likes.js";
 import { openCloseFormContact, validateForm } from "../utils/form.js";
