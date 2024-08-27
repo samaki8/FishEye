@@ -18,7 +18,7 @@ export default class PhotographerHeader {
                 <p class="photographer_tagline">${this.photographer.tagline}</p>    
             </div>
             <button class="btn btn_cta" type="button" aria-label="Open contact form">Contactez-moi</button>
-            <img class="photographer_thumbnail" src="assets/photographers/${this.photographer.portrait}" alt="${this.photographer.name}">
+            <img class="photographer_thumbnail" src="./assets/photographers/${this.photographer.portrait}" alt="${this.photographer.name}">
         `;
         profilePageHeader.innerHTML = about;
         return about;
