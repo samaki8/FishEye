@@ -755,9 +755,9 @@ aside{
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1000px;
-    height: 90%;
-    max-height: 1000px;
+   max-width: 1253px;
+    height: 100%;
+   max-height: 984px;
     background-color: #fff;
     padding: 25px 60px 0;
     border-radius: 5px;
@@ -784,8 +784,20 @@ aside{
 
 .lightbox_media img,
 .lightbox_media video{
-    width: 100%;
+   /* width: 100%;
     height: calc(100% - 50px);
+    max-width: 1050px;
+max-height: 900px;
+/*left: 96px;
+gap: 0px;
+opacity: 0px;
+object-fit:fill;*/
+max-width: 1050px;
+            max-height: 900px;
+            width: auto;
+            height: auto;
+            object-fit:contain;
+
 }
 
 .lightbox_media video:focus{
