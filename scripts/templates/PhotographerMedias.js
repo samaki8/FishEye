@@ -1,4 +1,4 @@
-export default class PhotographerMedias{
+export default class PhotographerMedias {
   constructor(photographer, medias) {
       this.photographer = photographer;
       this.medias = medias;
@@ -44,7 +44,7 @@ export default class PhotographerMedias{
       profilePageContent.innerHTML = content;
       return content;
   };
-};
+}
 
 /*import MediaManager from '../models/MediaManager.js';
 import { createImage, createVideo } from '../models/createmediacard.js';

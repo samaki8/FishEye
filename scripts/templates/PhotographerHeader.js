@@ -29,4 +29,4 @@ if (photographer && photographer.name) {
         profilePageHeader.innerHTML = about;
         return about;
     };
-};
+}
