@@ -5,8 +5,14 @@ export default class PhotographerHeader {
 
     createPhotographerHeader() {
         const profilePageHeader = document.querySelector(".main_about");
-        const formName = document.querySelector(".modal_form_name");
-        formName.textContent = this.photographer.name;
+       // const formName = document.querySelector(".modal_form_name");
+//formName.textContent = this.photographer?.name ?? "Nom du photographe inconnu";
+/*
+if (photographer && photographer.name) {
+    formName.textContent = this.photographer?.name
+} else {
+    console.error("L'objet photographer est undefined ou n'a pas de propriété 'name'");
+}*/
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
             metaDescription.content = `Découvrez ${this.photographer.name}, photographe professionnel basé à ${this.photographer.city}, ${this.photographer.country} offrant ses services à partir de ${this.photographer.price} € / jour.`;
