@@ -1,6 +1,6 @@
 import Api from "../api/api.js";
-import PhotographerHeader from "../templates/photographerheader.js";
-import PhotographerMedias from "../templates/photographermedias.js";
+import photographerheader from "../templates/photographerheader.js";
+import photographermedias from "../templates/photographermedias.js";
 import Photographer from "../models/photographer.js";
 import mediasfactory from "../factories/mediasfactory.js";
 import { displayTotalLikes } from "../models/likes.js";
