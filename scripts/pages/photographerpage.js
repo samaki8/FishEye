@@ -1,5 +1,5 @@
 import Api from "../api/api.js";
-import PhotographerHeader from "../templates/photographerheader.js";
+import PhotographerHeader from '../templates/photographerheader.js';
 import PhotographerMedias from "../templates/photographermedias.js";
 import Photographer from "../models/photographer.js";
 import MediasFactory from "../factories/mediasfactory.js";
