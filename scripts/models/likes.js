@@ -1,4 +1,4 @@
-import { getPhotographerById } from "../pages/photographerPage.js";
+import { getPhotographerById } from "../pages/photographerpage.js";
 
 export const displayTotalLikes = async () => {
     const { medias } = await getPhotographerById();
