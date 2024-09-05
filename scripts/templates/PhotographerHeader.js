@@ -1,12 +1,12 @@
-export default class photographerheader {
+export default class PhotographerHeader {
     constructor(photographer) {
         this.photographer = photographer;
     };
 
     createPhotographerHeader() {
         const profilePageHeader = document.querySelector(".main_about");
-       // const formName = document.querySelector(".modal_form_name");
-//formName.textContent = this.photographer?.name ?? "Nom du photographe inconnu";
+       const formName = document.querySelector(".modal_form_name");
+ formName.textContent = this.photographer?.name ?? "Nom du photographe inconnu";
 /*
 if (photographer && photographer.name) {
     formName.textContent = this.photographer?.name

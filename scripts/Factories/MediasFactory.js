@@ -16,7 +16,7 @@ export default class MediasFactory {
 }
 */
 import {Image,Video} from '../models/media.js'
-export default class mediasfactory {
+export default class MediasFactory {
     constructor(data) {
         if (data.image) {
             return new Image(data)

@@ -1,7 +1,7 @@
-import { getphotographerById } from "../pages/photographerpage.js";
+import { getPhotographerById  } from "../pages/photographerpage.js";
 
 export const displayTotalLikes = async () => {
-    const { medias } = await getphotographerById();
+    const { medias } = await getPhotographerById ();
     const allBtnLike = document.querySelectorAll(".btn_like");
     const likesElement = document.querySelector(".photographer_likes_count");
 
