@@ -1,8 +1,8 @@
 import Api from "../api/api.js";
-import PhotographerHeader from "../templates/PhotographerHeader.js";
-import PhotographerMedias from "../templates/PhotographerMedias.js";
+import PhotographerHeader from "../templates/photographerheader.js";
+import PhotographerMedias from "../templates/photographermedias.js";
 import Photographer from "../models/photographer.js";
-import MediasFactory from "../factories/MediasFactory.js";
+import mediasfactory from "../factories/mediasfactory.js";
 import { displayTotalLikes } from "../models/likes.js";
 import { openCloseFormContact, validateForm } from "../utils/form.js";
 import { openCloseFilterMenu, displayMediaWithFilter } from "../utils/filter.js";
@@ -17,7 +17,7 @@ export const getPhotographerById = async () => {
         .map(photographer => new Photographer(photographer))
         .find(photographer => photographer.id == photographerId);
     const medias = media
-        .map(media => new MediasFactory(media))
+        .map(media => new mediasfactory(media))
         .filter(media => media.photographerId == photographerId);
     return { photographer, medias };
 };

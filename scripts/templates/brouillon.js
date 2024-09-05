@@ -1,6 +1,6 @@
 import { sortByPopularity, sortByDate, sortByTitle } from '../models/sortMedia.js';
 
-export default class PhotographerMedias {
+export default class photographermedias {
   constructor(photographer, medias) {
     this.photographer = photographer;
     this.medias = medias;   

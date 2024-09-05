@@ -1,10 +1,10 @@
-export default class PhotographerMedias {
+export default class photographermedias {
   constructor(photographer, medias) {
       this.photographer = photographer;
       this.medias = medias;
   };
 
-  createPhotographerMedias() {
+  createphotographermedias() {
       const profilePageContent = document.querySelector(".main_content_medias");
       const content = `
           <section class="gallery">

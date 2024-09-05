@@ -1,4 +1,4 @@
-import Photographer from '/scripts/models/photographer.js'
+import Photographer from './scripts/models/photographer.js'
 
 // ************* PHOTOGRAPHER FACTORY ****************************//
 export default function photographerFactory(result, id) {
