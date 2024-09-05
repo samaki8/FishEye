@@ -24,9 +24,9 @@ export const getPhotographerById = async () => {
 
 const displayProfilePage = async () => {
     const { photographer, medias } = await getPhotographerById();
-    const headerTemplate = new PhotographerHeader(photographer);
+    const headerTemplate = new photographerheader(photographer);
     headerTemplate.createPhotographerHeader();
-    const mediasTemplate = new PhotographerMedias(photographer, medias);
+    const mediasTemplate = new photographermedias(photographer, medias);
     mediasTemplate.createPhotographerMedias();
 
     displayTotalLikes();
