@@ -1,4 +1,4 @@
-export default class Photographer {
+export default class photographer {
     constructor(data) {
         this.name = data.name;
         this.id = data.id;

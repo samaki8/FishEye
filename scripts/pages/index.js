@@ -1,6 +1,6 @@
 import { photographerTemplate } from '../templates/photographer.js';
 
-async function getPhotographers() {
+async function getphotographers() {
   try {
     const response = await fetch('data/photographers.json');
     if (!response.ok) {
@@ -25,7 +25,7 @@ async function displayData(photographers) {
 
 async function init() {
     // Récupère les datas des photographes
-    const { photographers } = await getPhotographers();
+    const { photographers } = await getphotographers();
     displayData(photographers);
 }
 

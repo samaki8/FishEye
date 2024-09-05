@@ -1,7 +1,7 @@
 import Api from "../api/api.js";
 import photographerheader from "../templates/photographerheader.js";
 import photographermedias from "../templates/photographermedias.js";
-import Photographer from "../models/photographer.js";
+import photographer from "../models/photographer.js";
 import mediasfactory from "../factories/mediasfactory.js";
 import { displayTotalLikes } from "../models/likes.js";
 import { openCloseFormContact, validateForm } from "../utils/form.js";
@@ -25,10 +25,10 @@ export const getPhotographerById = async () => {
 const displayProfilePage = async () => {
     const { photographer, medias } = await getPhotographerById();
     const headerTemplate = new photographerheader(photographer);
-    headerTemplate.createPhotographerHeader();
+    headerTemplate.createphotographerheader();
     const mediasTemplate = new photographermedias(photographer, medias);
-    mediasTemplate.createPhotographerMedias();
-
+    mediasTemplate.createphotographermedias();
+    
     displayTotalLikes();
     openCloseFormContact();
     validateForm();

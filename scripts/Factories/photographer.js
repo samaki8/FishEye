@@ -1,4 +1,4 @@
-import Photographer from './scripts/models/photographer.js'
+import photographer from './scripts/models/photographer.js'
 
 // ************* PHOTOGRAPHER FACTORY ****************************//
 export default function photographerFactory(result, id) {
@@ -7,11 +7,11 @@ export default function photographerFactory(result, id) {
     case 'photographer': {
         // Get photographe's data by ID
         const photographerData = result.data.filter((photographer) => photographer.id == id)
-        return new Photographer(photographerData[0])
+        return new photographer(photographerData[0])
     }
     case 'photographers': {
         // Get photographes data
-        return result.data.map((photographer) => new Photographer(photographer))
+        return result.data.map((photographer) => new photographer(photographer))
     }
     default:
         throw new Error('No type')
